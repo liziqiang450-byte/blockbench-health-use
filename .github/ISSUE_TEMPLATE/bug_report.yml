@@ -1,0 +1,71 @@
+name: Bug 反馈
+description: 插件运行异常、数据不对、界面/翻译问题
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢反馈！请尽量填完整，尤其是**复现步骤**和**控制台报错**，这样定位最快。
+  - type: input
+    id: plugin_version
+    attributes:
+      label: 插件版本
+      placeholder: v1.5.0
+    validations:
+      required: true
+  - type: input
+    id: bb_version
+    attributes:
+      label: Blockbench 版本与版本类型
+      description: 例如 5.1.4 官方桌面版 / Blockbench-Community 5.3.58 portable
+      placeholder: Blockbench 5.1.4 桌面版
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: 操作系统
+      options:
+        - Windows
+        - macOS
+        - Linux
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      placeholder: |
+        1. 打开项目 xxx
+        2. 在建模模式待了 10 分钟
+        3. 打开面板看到...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期望结果
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: 实际结果
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: 控制台报错（可选）
+      description: Blockbench 菜单 Help → Developer → Toggle Console，把相关报错贴进来
+      render: shell
+    validations:
+      required: false
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: 截图（可选）
+      description: 直接拖图片进来即可
+    validations:
+      required: false
