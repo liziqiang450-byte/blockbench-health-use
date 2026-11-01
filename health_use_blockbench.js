@@ -12,9 +12,12 @@
 	'use strict';
 
 	const PLUGIN_ID = 'health_use_blockbench';
-	const PLUGIN_VERSION = '1.5.0';
-	const BUILD_STAMP = '2026-11-02 03:25';
+	const PLUGIN_VERSION = '1.6.0';
+	const BUILD_STAMP = '2026-11-02 03:55';
 	const STORAGE_KEY = 'hubb_data_v1';
+	const REPO_GITHUB = 'https://github.com/liziqiang450-byte/blockbench-health-use';
+	const REPO_GITEE = 'https://gitee.com/hgx100/blockbench-health-use';
+	const FEEDBACK_URL = REPO_GITHUB + '/issues';
 
 	const CATS = ['model', 'texture', 'animate', 'other'];
 	const CAT_COLOR = { model: '#4a9eff', texture: '#38c172', animate: '#f6993f', other: '#8e9aaf' };
@@ -41,7 +44,7 @@
 			'action.name': '健康使用 Blockbench',
 			'action.desc': '查看使用时长、评级与人工费',
 			'plugin.description': '像「健康使用手机」一样统计建模/贴图/动画时长，提供可视化面板、使用趋势、时长评级与人工费计算器。',
-			'plugin.about': '本插件为纯 Vibe Coding 作品，powered by DeepSeek。\n\n数据只保存在本机，不上传。\n\n反馈 / 联系：哔哩哔哩 @圣起司（https://space.bilibili.com/18095414）',
+			'plugin.about': '本插件为纯 Vibe Coding 作品，powered by DeepSeek。\n\n数据只保存在本机，不上传。\n\n反馈 / 联系：哔哩哔哩 @圣起司（https://space.bilibili.com/18095414）\nGitHub：https://github.com/liziqiang450-byte/blockbench-health-use\nGitee：https://gitee.com/hgx100/blockbench-health-use',
 			'ratingDialog.title': '评级标准',
 			'clear.title': '清空使用数据',
 			'clear.message': '确定要清空「健康使用 Blockbench」的全部本地统计数据吗？\n\n此操作不可撤销，建议先导出 JSON 备份。',
@@ -135,6 +138,7 @@
 			'footer.sep': '，',
 			'footer.creditPrefix': '点子提供者：',
 			'footer.creditName': '哔哩哔哩@圣起司',
+			'footer.feedback': '问题反馈',
 			'idle.60': '1 分钟无操作',
 			'idle.120': '2 分钟无操作（推荐）',
 			'idle.300': '5 分钟无操作',
@@ -203,7 +207,7 @@
 			'action.name': '健康使用 Blockbench',
 			'action.desc': '檢視使用時長、評級與人工費',
 			'plugin.description': '像「健康使用手機」一樣統計建模/貼圖/動畫時長，提供視覺化面板、使用趨勢、時長評級與人工費計算器。',
-			'plugin.about': '本外掛為純 Vibe Coding 作品，powered by DeepSeek。\n\n資料只保存在本機，不上傳。\n\n回饋 / 聯絡：嗶哩嗶哩 @圣起司（https://space.bilibili.com/18095414）',
+			'plugin.about': '本外掛為純 Vibe Coding 作品，powered by DeepSeek。\n\n資料只保存在本機，不上傳。\n\n回饋 / 聯絡：嗶哩嗶哩 @圣起司（https://space.bilibili.com/18095414）\nGitHub：https://github.com/liziqiang450-byte/blockbench-health-use\nGitee：https://gitee.com/hgx100/blockbench-health-use',
 			'ratingDialog.title': '評級標準',
 			'clear.title': '清除使用資料',
 			'clear.message': '確定要清除「健康使用 Blockbench」的全部本機統計資料嗎？\n\n此操作無法復原，建議先匯出 JSON 備份。',
@@ -297,6 +301,7 @@
 			'footer.sep': '，',
 			'footer.creditPrefix': '點子提供者：',
 			'footer.creditName': '嗶哩嗶哩@圣起司',
+			'footer.feedback': '問題回饋',
 			'idle.60': '1 分鐘無操作',
 			'idle.120': '2 分鐘無操作（推薦）',
 			'idle.300': '5 分鐘無操作',
@@ -365,7 +370,7 @@
 			'action.name': 'Health Use Blockbench',
 			'action.desc': 'View usage time, rating and labor cost',
 			'plugin.description': 'Track modeling / texturing / animation time like a digital-wellbeing app, with a dashboard, trends, rating and labor cost calculator.',
-			'plugin.about': 'A pure vibe-coding project, powered by DeepSeek.\n\nAll data stays on this machine; nothing is uploaded.\n\nFeedback / contact: Bilibili @圣起司 (https://space.bilibili.com/18095414)',
+			'plugin.about': 'A pure vibe-coding project, powered by DeepSeek.\n\nAll data stays on this machine; nothing is uploaded.\n\nFeedback / contact: Bilibili @圣起司 (https://space.bilibili.com/18095414)\nGitHub: https://github.com/liziqiang450-byte/blockbench-health-use\nGitee: https://gitee.com/hgx100/blockbench-health-use',
 			'ratingDialog.title': 'Rating scale',
 			'clear.title': 'Clear usage data',
 			'clear.message': 'Clear all local statistics of "Health Use Blockbench"?\n\nThis cannot be undone. Export a JSON backup first if needed.',
@@ -459,6 +464,7 @@
 			'footer.sep': ' · ',
 			'footer.creditPrefix': 'Idea by ',
 			'footer.creditName': 'Bilibili @圣起司',
+			'footer.feedback': 'Feedback',
 			'idle.60': 'After 1 minute',
 			'idle.120': 'After 2 minutes (recommended)',
 			'idle.300': 'After 5 minutes',
@@ -1855,7 +1861,7 @@
 				</div>
 				<div class="hubb-foot">
 					{{ t('footer.storage') }} ｜ {{ t('footer.version', { v: version, stamp: buildStamp }) }}<br>
-					<a class="hubb-link" href="https://www.deepseek.com/" target="_blank" rel="noopener" @click.prevent="openLink('https://www.deepseek.com/')">{{ t('footer.powered') }}</a>{{ t('footer.sep') }}{{ t('footer.creditPrefix') }}<a class="hubb-link" href="https://space.bilibili.com/18095414" target="_blank" rel="noopener" @click.prevent="openLink('https://space.bilibili.com/18095414')">{{ t('footer.creditName') }}</a>
+					<a class="hubb-link" href="https://www.deepseek.com/" target="_blank" rel="noopener" @click.prevent="openLink('https://www.deepseek.com/')">{{ t('footer.powered') }}</a>{{ t('footer.sep') }}{{ t('footer.creditPrefix') }}<a class="hubb-link" href="https://space.bilibili.com/18095414" target="_blank" rel="noopener" @click.prevent="openLink('https://space.bilibili.com/18095414')">{{ t('footer.creditName') }}</a>{{ t('footer.sep') }}<a class="hubb-link" :href="feedbackUrl" target="_blank" rel="noopener" @click.prevent="openLink(feedbackUrl)">{{ t('footer.feedback') }}</a>
 				</div>
 			</div>
 		</div>
@@ -1891,6 +1897,7 @@
 						settings: null,
 						version: PLUGIN_VERSION,
 						buildStamp: BUILD_STAMP,
+						feedbackUrl: FEEDBACK_URL,
 						idleOptions: IDLE_OPTIONS,
 						timer: null,
 						calYear: now.getFullYear(),
