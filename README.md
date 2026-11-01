@@ -2,7 +2,9 @@
 
 一个把「健康使用手机」搬到 Blockbench 的本地优先使用统计插件：按项目记录建模 / 贴图 / 动画时长，提供可视化面板、使用日历、每日时长曲线、趣味时长评级与人工费计算器。界面支持 **简体中文 / 繁體中文 / English**，数据只保存在本机。
 
-> 插件版本：v1.5.0 ｜ 适用：Blockbench 5.1+ 桌面版（含 Blockbench-Community 5.3.x）｜ 作者：圣起司
+> 插件版本：v1.6.0 ｜ 适用：Blockbench 5.1+ 桌面版（含 Blockbench-Community 5.3.x）｜ 作者：圣起司
+>
+> GitHub：<https://github.com/liziqiang450-byte/blockbench-health-use> ｜ Gitee 镜像：<https://gitee.com/hgx100/blockbench-health-use>
 
 ---
 
@@ -18,7 +20,7 @@
 
 ## 安装
 
-1. 下载 Release 里的 `health_use_blockbench.js`
+1. 下载 Release 里的 `health_use_blockbench.js`（GitHub Releases / Gitee Releases 均可）
 2. Blockbench → **File → Plugins → Load Plugin from File**
 3. 选中文件，确认；之后在 **Tools** 菜单打开「健康使用 Blockbench」
 
@@ -26,24 +28,28 @@
 
 ## 反馈与联系
 
-- 点子提供者 / 反馈：**哔哩哔哩 @圣起司** → <https://space.bilibili.com/18095414>
-- GitHub Issues：本仓库的 Issue 区（bug / 建议都欢迎）
+- **GitHub Issues**（推荐）：<https://github.com/liziqiang450-byte/blockbench-health-use/issues>
+- **Gitee Issues**（备用）：<https://gitee.com/hgx100/blockbench-health-use/issues>
+- **哔哩哔哩 @圣起司**（点子提供者）：<https://space.bilibili.com/18095414>
 - 请附上：Blockbench 版本、系统、插件版本、复现步骤；有控制台报错最好一并贴上
+
+> 插件面板页脚已内置「Powered by DeepSeek · 点子提供者：哔哩哔哩@圣起司 · 问题反馈」三个可点击链接。
 
 ## 隐私
 
 所有统计数据保存在本机 `localStorage`，插件不发起任何网络请求，不上传任何信息。
 
-## 开发
+## 仓库内容
 
 ```
-发布/health_use_blockbench.js   插件本体（单文件）
-测试/harness.js                 Node 逻辑测试（node "测试/harness.js"）
-文档/                           需求与实现状态
-调研/                           技术调研与代码评审
+health_use_blockbench.js   插件本体（单文件，直接加载）
+安装与使用说明.md          详细说明
+CHANGELOG.md               版本记录
+LICENSE                    MIT
+.github/ISSUE_TEMPLATE/    Bug / 功能建议表单
 ```
 
-测试需要 Node.js 18+；不需要安装依赖。
+测试与开发资料在作者本地工程里（Node 测试台 102 条断言）；本仓库只放发布所需文件。
 
 ## License
 

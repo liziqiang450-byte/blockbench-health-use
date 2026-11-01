@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.6.0 (2026-11-02)
+
+- 页脚新增「问题反馈」链接（GitHub Issues）
+- 插件 about 增加 GitHub / Gitee 仓库地址与反馈入口
+- 配套 GitHub / Gitee 仓库建立
+
 ## v1.5.0 (2026-11-02)
 
 - 页脚增加可点击联系方式：DeepSeek 官网、B 站 @圣起司（点子提供者）
